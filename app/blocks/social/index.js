@@ -11,7 +11,7 @@ export function socialShare() {
 		return {
 			fb: `http://www.facebook.com/sharer.php?u=${encUrl}`,
 			tw: `http://twitter.com/share?url=${encUrl}&text=${encTitle}`,
-			vk: `http://vk.com/share.php?url=${encUrl}&title=${encTitle}`
+			vk: `http://vk.com/share.php?image=http://s.csssr.ru/U02D1C74W/woman-man.jpg&url=${encUrl}&title=${encTitle}`
 		};
 	}
 
