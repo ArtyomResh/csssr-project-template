@@ -13,5 +13,6 @@ mixin social(data)
 		block
 
 		+social-link('vk', 'https://vk.com/share.php?url=' + url + '&title=' + title + '&description=' + text+ '&image=' + image + '&noparse=true')
-		+social-link('fb')(data-url=url data-title=title data-text=text data-image=image)
+		//- +social-link('fb')(data-url=url data-title=title data-text=text data-image=image)
+		+social-link('fb', 'http://www.facebook.com/sharer.php?u=' + url + '&title=' + title + '&description=' + text+ '&image=' + image + '&noparse=true')
 		+social-link('twitter', 'https://twitter.com/intent/tweet?text=' + text + '&url=' + url)
