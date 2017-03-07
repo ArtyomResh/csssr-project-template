@@ -80,14 +80,19 @@
 		&_last
 			background-color greenish-teal
 
-		&_disabled
+		&_disabled&_next
 			pointer-events none
-			opacity .5
+			background-color #a9c9f8
+
+		&_disabled&_last
+			pointer-events none
+			background-color #9be7be
 
 @media (max-width: 641px)
 	.question
 		&__text
 		&__counter
+			margin-top 10px
 			text-align left
 
 		&__btn
