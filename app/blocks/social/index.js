@@ -10,7 +10,8 @@ export function socialShare() {
 
 		return {
 			fb: `http://www.facebook.com/sharer.php?u=${encUrl}`,
-			tw: `http://twitter.com/share?url=${encUrl}&text=${encTitle}`
+			tw: `http://twitter.com/share?url=${encUrl}&text=${encTitle}`,
+			vk: `http://vk.com/share.php?url=${encUrl}&title=${encTitle}`
 		};
 	}
 
@@ -26,6 +27,10 @@ export function socialShare() {
 
 		else if ($shareSelector.hasClass('twitter')) {
 			$shareSelector.prop('href', socialGenerator(null, shareText).tw);
+		}
+
+		else if ($shareSelector.hasClass('vkontakte')) {
+			$shareSelector.prop('href', socialGenerator(null, shareText).vk);
 		}
 	});
 }

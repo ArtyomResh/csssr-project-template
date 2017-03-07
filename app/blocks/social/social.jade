@@ -12,7 +12,11 @@ mixin social(data)
 	+b('ul').social&attributes(attributes)
 		block
 
-		+social-link('vk', 'https://vk.com/share.php?url=' + url + '&title=' + title + '&description=' + text+ '&image=' + image + '&noparse=true')
+		//- +social-link('vk', 'https://vk.com/share.php?url=' + url + '&title=' + title + '&description=' + text+ '&image=' + image + '&noparse=true')
+		li.social__item
+			a(class='js-share vkontakte social__link social__link_vk js-social-fb')
 		li.social__item
 			a(class='js-share facebook social__link social__link_fb js-social-fb')
-		+social-link('twitter', 'https://twitter.com/intent/tweet?text=' + text + '&url=' + url)
+		li.social__item
+			a(class='js-share twitter social__link social__link_twitter js-social-fb')
+		//- +social-link('twitter', 'https://twitter.com/intent/tweet?text=' + text + '&url=' + url)
