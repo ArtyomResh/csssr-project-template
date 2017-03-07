@@ -26,11 +26,11 @@ export function socialShare() {
 		}
 
 		else if ($shareSelector.hasClass('twitter')) {
-			$shareSelector.prop('href', socialGenerator(null, shareText).tw);
+			$shareSelector.prop('href', socialGenerator(null, `Какого пола твой код? Тест от CSSSR:  ${shareText}`).tw);
 		}
 
 		else if ($shareSelector.hasClass('vkontakte')) {
-			$shareSelector.prop('href', socialGenerator(null, shareText).vk);
+			$shareSelector.prop('href', socialGenerator().vk);
 		}
 	});
 }
