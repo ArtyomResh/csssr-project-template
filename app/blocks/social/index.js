@@ -22,15 +22,15 @@ export function socialShare() {
 		// const shareUrl = $shareSelector.data('share-url');// если понадобится указывать url вручную, подставить как параметр в socialGenerator
 		// Закомментил, потому что пока не используем эти переменнные, EsLint ругается
 		if ($shareSelector.hasClass('facebook')) {
-			$shareSelector.prop('href', socialGenerator().fb);
+			$shareSelector.prop('href', socialGenerator('http://8march.csssr.ru/').fb);
 		}
 
 		else if ($shareSelector.hasClass('twitter')) {
-			$shareSelector.prop('href', socialGenerator(null, `Какого пола твой код? Тест от CSSSR:  ${shareText}`).tw);
+			$shareSelector.prop('href', socialGenerator('http://8march.csssr.ru/', `Какого пола твой код? Тест от CSSSR:`).tw);
 		}
 
 		else if ($shareSelector.hasClass('vkontakte')) {
-			$shareSelector.prop('href', socialGenerator().vk);
+			$shareSelector.prop('href', socialGenerator('http://8march.csssr.ru/').vk);
 		}
 	});
 }
